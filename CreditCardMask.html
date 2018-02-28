@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter a string and all but the last 4 characters of the string will be masked.</p>
+
+<button onclick="maskify()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function maskify(cc) {
+    var cc = prompt("Enter string");
+    if (cc.length > 4) {
+    var result = "#".repeat(cc.length-4) + cc.substr(-4);
+} else {
+	var result = cc;
+}
+
+document.getElementById("demo").innerHTML = result;
+    console.log(result);
+}
+    
+
+</script>
+
+</body>
+</html>

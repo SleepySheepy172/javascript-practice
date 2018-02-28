@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter a string (abc) and it will be returned in the form (A,Bb,Ccc)</p>
+
+<button onclick="accum()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function accum(s) {
+    var s = prompt("Enter string");
+    var letters = s.toLowerCase().split("");
+    var rpt = [];
+    for (var i = 0; i < s.length; i++) {
+    	rpt.push(letters[i].repeat(i+1).replace(letters[i][0], letters[i][0].toUpperCase()));
+    }
+
+    var mumble = rpt.join("-");
+ 
+    document.getElementById("demo").innerHTML = rpt;
+    console.log(mumble);
+}
+</script>
+
+</body>
+</html>
